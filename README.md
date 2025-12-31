@@ -5,6 +5,7 @@
 </a>
 
 Develop a machine learning model that can accurately detect and classify network attacks using the CIC-UNSW-NB15 dataset.
+This project is under development.
 [Project Proposal](docs/NetworkDataandCybersecurity.pdf)
 
 ## Project Organization
@@ -26,7 +27,7 @@ Develop a machine learning model that can accurately detect and classify network
 │                         the creator's initials, and a short `-` delimited description, e.g.
 │                         `1.0-jqp-initial-data-exploration`.
 │
-├── pyproject.toml     <- Project configuration file with package metadata for 
+├── pyproject.toml     <- Project configuration file with package metadata for
 │                         networkdatasecurityscanner and configuration for tools like black
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
@@ -39,9 +40,11 @@ Develop a machine learning model that can accurately detect and classify network
 │
 ├── setup.cfg          <- Configuration file for flake8
 ```
+
 Citation: [CIC-UNSW-NB15](https://www.unb.ca/cic/datasets/cic-unsw-nb15.html)
+
 ```
 H. Mohammadian, A. H. Lashkari, A. Ghorbani. “Poisoning and Evasion: Deep Learning-Based NIDS under Adversarial Attacks,” 21st Annual International Conference on Privacy, Security and Trust (PST), 2024.
 ```
---------
 
+---
