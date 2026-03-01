@@ -3,6 +3,7 @@ flake8
 ipython
 isort
 jupyterlab
+lightgbm
 matplotlib
 notebook
 numpy
@@ -11,4 +12,6 @@ pip
 pytest
 python-dotenv
 scikit-learn
+seaborn
+xgboost
 -e .
