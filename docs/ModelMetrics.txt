@@ -1,0 +1,14 @@
+Model combo: lightgbm_random_oversample
+Saved at: 2026-03-03T16:31:18
+
+{
+  "colsample_bytree": 0.85,
+  "learning_rate": 0.05,
+  "max_depth": 10,
+  "min_child_samples": 20,
+  "n_estimators": 300,
+  "num_leaves": 31,
+  "reg_alpha": 0.0,
+  "reg_lambda": 0.1,
+  "subsample": 0.7
+}
