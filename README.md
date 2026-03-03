@@ -36,20 +36,21 @@ The model classifies network traffic into 10 categories:
 - **Worms:** Self-replicating malware propagation
 
 ### Model Comparison Results
-| Model | Accuracy |
-|-------|----------|
-| **LightGBM** | **98.59%** ✓ |
-| XGBoost | 98.56% |
-| Random Forest | 98.49% |
-| Gradient Boosting | 98.29% |
-| Logistic Regression | 96.64% |
+Model selection was updated to account for class imbalance using **Macro-F1** and per-class recall, not accuracy alone.
 
-LightGBM was selected as the final model due to superior balanced predictions across all threat categories, particularly for benign traffic classification (99% accuracy).
+| Finalist Model + Strategy | Macro-F1 (Imbalance Study) | Selection Note |
+|-------|----------|----------|
+| **Random Forest + RandomOverSampler** | **0.4720** | Best overall Macro-F1, but weaker minority-class behavior on at least one class (notably Worms) |
+| **LightGBM + RandomOverSampler** | **0.4708** | Near-top Macro-F1 with stronger minority-class consistency and better speed/performance balance |
+
+**Final model:** LightGBM (`random_oversample` + tuned parameters). It was chosen for more robust minority-class behavior while keeping strong overall performance and practical inference speed.
 
 ### Data Processing
-- **Feature Engineering:** Reduced from 83 to 30 most impactful features based on correlation analysis
-- **Sampling Strategy:** Stratified sampling maintaining original attack distribution
-- **Key Insight:** No single parameter strongly predicts attacks; multiple features required for accurate detection
+- **Data Cleaning:** Aligned schema across source files, removed duplicates, handled infinities/missing values, and kept a consistent feature space across splits.
+- **Categorical Encoding:** One-hot encoded `Protocol` and `Dst Port`, then aligned validation/holdout columns to the training schema.
+- **Split Strategy:** Preserved predefined split workflow (`df1` train, `df2` validation, `df3` holdout).
+- **Modeling Artifacts:** Saved sparse matrices and labels for reproducible modeling (`X_train.npz`, `X_val.npz`, `X_holdout.npz`, `X_feature_names.csv`, `y_train.csv`, `y_val.csv`, `y_holdout.csv`).
+- **Scaling Note:** Included as a demonstration step only; final tree-based models were trained on unscaled features.
 
 ## Project Organization
 
