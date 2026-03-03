@@ -1,0 +1,2 @@
+model_combo,model_class,saved_at,feature_count,test_accuracy,test_micro_f1,test_macro_f1,test_weighted_f1,best_cv_macro_f1,hyperparameters_json
+lightgbm_random_oversample,LGBMClassifier,2026-03-03 16:40:29,30604,0.9803223149125758,0.9803223149125758,0.4793287163994081,0.9821818123640343,0.9621496514261375,"{""colsample_bytree"": 0.85, ""learning_rate"": 0.05, ""max_depth"": 10, ""min_child_samples"": 20, ""n_estimators"": 300, ""num_leaves"": 31, ""reg_alpha"": 0.0, ""reg_lambda"": 0.1, ""subsample"": 0.7}"

@@ -1,0 +1,127 @@
+MODEL METRICS SUMMARY
+======================================================================
+Model Combo: lightgbm_random_oversample
+Model Class: LGBMClassifier
+Saved At: 2026-03-03 16:40:29
+
+FEATURES
+----------------------------------------------------------------------
+Total feature count: 30604
+Top 20 features by importance:
+  - Bwd Packets/s: 3623
+  - Fwd IAT Max: 3509
+  - Flow IAT Max: 3307
+  - Average Packet Size: 3070
+  - Fwd IAT Min: 3055
+  - Bwd IAT Max: 2838
+  - Flow IAT Std: 2718
+  - Bwd IAT Min: 2537
+  - Flow IAT Min: 2374
+  - Flow Duration: 2332
+  - Fwd IAT Mean: 2049
+  - Fwd IAT Std: 1837
+  - Flow Bytes/s: 1666
+  - Fwd IAT Total: 1575
+  - Bwd IAT Mean: 1551
+  - Flow IAT Mean: 1477
+  - Fwd Packet Length Max: 1266
+  - Dst Port=80: 1240
+  - Fwd Packets/s: 1122
+  - Fwd Packet Length Std: 1112
+
+PARAMETERS / HYPERPARAMETERS
+----------------------------------------------------------------------
+colsample_bytree: 0.85
+learning_rate: 0.05
+max_depth: 10
+min_child_samples: 20
+n_estimators: 300
+num_leaves: 31
+reg_alpha: 0.0
+reg_lambda: 0.1
+subsample: 0.7
+
+PERFORMANCE METRICS
+----------------------------------------------------------------------
+Test Accuracy: 0.9803
+Test Micro-F1: 0.9803
+Test Macro-F1: 0.4793
+Test Weighted-F1: 0.9822
+Best CV Macro-F1: 0.9621
+
+Full classification report (JSON):
+{
+  "0": {
+    "precision": 0.9979597010780987,
+    "recall": 0.9867615284525671,
+    "f1-score": 0.9923290236611806,
+    "support": 83771.0
+  },
+  "1": {
+    "precision": 0.1111111111111111,
+    "recall": 0.09090909090909091,
+    "f1-score": 0.1,
+    "support": 11.0
+  },
+  "2": {
+    "precision": 0.07692307692307693,
+    "recall": 0.08333333333333333,
+    "f1-score": 0.08,
+    "support": 12.0
+  },
+  "3": {
+    "precision": 0.26229508196721313,
+    "recall": 0.125,
+    "f1-score": 0.1693121693121693,
+    "support": 128.0
+  },
+  "4": {
+    "precision": 0.6143572621035058,
+    "recall": 0.8278965129358831,
+    "f1-score": 0.7053186391950168,
+    "support": 889.0
+  },
+  "5": {
+    "precision": 0.44227005870841485,
+    "recall": 0.837037037037037,
+    "f1-score": 0.5787451984635084,
+    "support": 810.0
+  },
+  "6": {
+    "precision": 0.7604166666666666,
+    "recall": 0.5488721804511278,
+    "f1-score": 0.6375545851528385,
+    "support": 133.0
+  },
+  "7": {
+    "precision": 0.7853403141361257,
+    "recall": 0.8152173913043478,
+    "f1-score": 0.8,
+    "support": 368.0
+  },
+  "8": {
+    "precision": 0.39344262295081966,
+    "recall": 0.4,
+    "f1-score": 0.39669421487603307,
+    "support": 60.0
+  },
+  "9": {
+    "precision": 0.4,
+    "recall": 0.2857142857142857,
+    "f1-score": 0.3333333333333333,
+    "support": 7.0
+  },
+  "accuracy": 0.9803223149125758,
+  "macro avg": {
+    "precision": 0.48441158956450325,
+    "recall": 0.5000741360137673,
+    "f1-score": 0.4793287163994081,
+    "support": 86189.0
+  },
+  "weighted avg": {
+    "precision": 0.9857029406520571,
+    "recall": 0.9803223149125758,
+    "f1-score": 0.9821818123640343,
+    "support": 86189.0
+  }
+}
