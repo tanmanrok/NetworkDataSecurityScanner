@@ -16,7 +16,7 @@ Traditional intrusion detection systems rely on static rules and signatures that
 - **Model Type:** LightGBM Classifier
 - **Dataset:** CIC-UNSW-NB15 (100,000 samples from 447,915 original instances)
 
-📊 **[View Final Notebook](notebooks/Model.ipynb)**
+📊 **[View Final Notebook](notebooks/Modeling.ipynb)**
 
 [Project Documentation](reports/Capstone_Final_Doc.pdf) | [Initial Proposal](docs/NetworkDataandCybersecurity.pdf)
 
