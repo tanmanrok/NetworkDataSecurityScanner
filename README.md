@@ -11,7 +11,7 @@ A machine learning-based intrusion detection system that detects and classifies 
 Traditional intrusion detection systems rely on static rules and signatures that cannot adapt to evolving attack patterns. This project leverages machine learning to dynamically detect malicious network activity by analyzing traffic metadata and behavior patterns across 30 key network features.
 
 **Final Model Performance:**
-- **Overall Accuracy:** 98.59%
+- **Overall Accuracy:** 98.03%
 - **Benign Traffic Detection:** 99%
 - **Model Type:** LightGBM Classifier
 - **Dataset:** CIC-UNSW-NB15 (100,000 samples from 447,915 original instances)
@@ -40,8 +40,8 @@ Model selection was updated to account for class imbalance using **Macro-F1** an
 
 | Finalist Model + Strategy | Macro-F1 (Imbalance Study) | Selection Note |
 |-------|----------|----------|
-| **Random Forest + RandomOverSampler** | **0.4720** | Best overall Macro-F1, but weaker minority-class behavior on at least one class (notably Worms) |
-| **LightGBM + RandomOverSampler** | **0.4708** | Near-top Macro-F1 with stronger minority-class consistency and better speed/performance balance |
+| **Random Forest + RandomOverSampler** | **0.4000** | Best overall Macro-F1, but weaker minority-class behavior on at least one class (notably Worms) |
+| **LightGBM + RandomOverSampler** | **0.4800** | Near-top Macro-F1 with stronger minority-class consistency and better speed/performance balance |
 
 **Final model:** LightGBM (`random_oversample` + tuned parameters). It was chosen for more robust minority-class behavior while keeping strong overall performance and practical inference speed.
 
